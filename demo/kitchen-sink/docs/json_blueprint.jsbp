@@ -1,0 +1,19 @@
+People = $Page with {
+    items: [$Person*]
+}
+
+Person = {
+    firstName: String,
+    lastName: String,
+    (hobbies: [String*])?
+}
+
+Page = {
+    links: {
+        self: $Uri,
+        (previousPage: $Uri)?
+        (nextPage: $Uri)?
+    }
+}
+
+Uri = String
